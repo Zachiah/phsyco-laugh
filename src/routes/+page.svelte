@@ -2,6 +2,10 @@
 	let laugh = '';
 </script>
 
+<svelte:head>
+	<title>Psycho laugh generator</title>
+</svelte:head>
+
 <div class="mx-4">
 	<div
 		class="mx-auto my-32 flex max-w-prose flex-col gap-4 rounded-md bg-pink-400 p-8 shadow-md shadow-pink-400"
