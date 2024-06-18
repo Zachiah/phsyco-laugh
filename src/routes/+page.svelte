@@ -21,8 +21,8 @@
 				const aches = Math.floor(Math.random() * 2) + 1;
 				laugh += `${'A'.repeat(ays)}${'H'.repeat(aches)}`;
 			}
-			const trailingAches = Math.floor(Math.random() * 3);
-			laugh += 'H'.repeat(trailingAches);
+			const trailingAys = Math.floor(Math.random() * 3);
+			laugh += 'A'.repeat(trailingAys);
 		}}
 	>
 		Generate ✨
