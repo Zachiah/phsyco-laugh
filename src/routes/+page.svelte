@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
+
 	let laugh = '';
+	let alert = false;
 </script>
 
 <svelte:head>
@@ -16,14 +19,28 @@
 			Psycho Laugh Generator
 		</h1>
 		{#if laugh}
-			<p class="break-all rounded-lg bg-purple-200 p-4 text-center font-mono text-lg">
+			<button
+				class="break-all rounded-lg bg-purple-200 p-4 text-center font-mono text-lg"
+				on:click={() => {
+					const input = document.createElement('input');
+					input.value = laugh;
+					document.body.appendChild(input);
+					input.select();
+					document.execCommand('copy');
+					input.remove();
+					alert = true;
+					setTimeout(() => {
+						alert = false;
+					}, 2000);
+				}}
+			>
 				&nbsp;{laugh}
-			</p>
+			</button>
 		{:else}
 			<p class="p-4 font-mono text-lg">&nbsp;</p>
 		{/if}
 		<button
-			class="rounded-md bg-white px-4 py-2 touch-manipulation"
+			class="touch-manipulation rounded-md bg-white px-4 py-2"
 			on:click={() => {
 				laugh = 'AHAHAH';
 				const glyphCount = 5 + Math.floor(Math.random() * 5);
@@ -40,3 +57,12 @@
 		</button>
 	</div>
 </div>
+
+{#if alert}
+	<div
+		transition:fade
+		class="fixed bottom-4 left-4 right-4 rounded-md bg-purple-200 p-4 shadow-md shadow-purple-200"
+	>
+		Copied to clipboard
+	</div>
+{/if}
