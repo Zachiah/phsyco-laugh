@@ -12,7 +12,7 @@
 
 <div class="mx-4">
 	<div
-		class="mx-auto my-32 flex max-w-prose flex-col gap-4 rounded-md bg-pink-400 p-8 shadow-md shadow-pink-400"
+		class="mx-auto my-32 flex max-w-prose flex-col gap-4 rounded-md bg-purple-400 p-8 shadow-md shadow-purple-400"
 	>
 		<h1
 			class="relative flex font-cursive text-4xl after:absolute after:-bottom-2 after:left-0 after:h-6 after:w-full after:rounded-md after:bg-purple-200 after:opacity-40 after:content-['']"
@@ -92,7 +92,7 @@
 			<p class="bg-purple-200 rounded-md p-4">Click on the psycho laugh that was generated to copy it to clipboard</p>
 			<p class="bg-purple-200 rounded-md p-4">Click the "?" button to show this help</p>
 			<button
-				class="w-min ml-auto rounded-md bg-pink-400 px-4 py-2"
+				class="w-min ml-auto rounded-md bg-purple-400 px-4 py-2"
 				on:click={() => {
 					help = false;
 				}}>Close</button
