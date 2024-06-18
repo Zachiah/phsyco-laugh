@@ -19,7 +19,7 @@
 			<p class="p-4 font-mono text-lg">&nbsp;</p>
 		{/if}
 		<button
-			class="rounded-md bg-white px-4 py-2"
+			class="rounded-md bg-white px-4 py-2 touch-manipulation"
 			on:click={() => {
 				laugh = 'AHAHAH';
 				const glyphCount = 5 + Math.floor(Math.random() * 5);
